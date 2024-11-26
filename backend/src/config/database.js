@@ -1,20 +1,19 @@
-// a configuração do nosso banco mysql
-// utilizando o sequelize
-const { Sequelize } = require('sequelize')
+// src/config/database.js
+const { Sequelize } = require('sequelize');
 
 class Database {
     constructor() {
-        this.init()
+        this.init();
     }
 
     init() {
         this.db = new Sequelize({
-            database: 'exemplo',
+            database: 'Locadora', // Novo nome do banco de dados
             host: 'localhost',
             username: 'root',
             dialect: 'mysql',
             password: ''
-        })
+        });
     }
 }
 
